@@ -19,10 +19,13 @@ def blink(pin):
   GPIO.output(pin, GPIO.HIGH)
 
   print("LED on")
-  time.sleep(15)
+  time.sleep(1600)
   print("LED off")
 
   GPIO.output(pin, GPIO.LOW)
+
+  # Release Resources
+  GPIO.cleanup()
 
 def main():
   while True:
